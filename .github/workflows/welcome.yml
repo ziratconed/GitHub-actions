@@ -1,0 +1,4 @@
+name: Post welcome yml
+on: 
+  pull_request:
+    types: [opened]
