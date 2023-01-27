@@ -1,13 +1,13 @@
-name: Post welcome yml file
-on: 
+name: Post welcome comment work flow
+on:
   pull_request:
     types: [opened]
 jobs:
   build:
-    name: Post welcome yml build
+    name: Post welcome comment build
     runs-on: ubuntu-latest
     steps:
-      - run: gh pr comment $PR_URL --body "Welcome to the repo, R"
-        env: 
+      - run: gh pr comment $PR_URL --body "Welcome to the repository!"
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
