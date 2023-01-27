@@ -1,4 +1,8 @@
-name: Post welcome yml
+name: Post welcome yml file
 on: 
   pull_request:
     types: [opened]
+jobs:
+  build:
+    name: Post welcome yml build
+    runs-on: ubuntu-latest
